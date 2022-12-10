@@ -1,8 +1,4 @@
-let precios = {
-    producto: 200,
-    hidro: 250,
-    secado: 300,
-}
+
 let char1 = '';
 let char2 = '';
 let char3 = "";
