@@ -1,69 +1,66 @@
+//---------STOCK---------------
+let comestibles = {
+    papas_acanaladas: 350,
+    papas_fritas: 300,
+    palitos_queso: 290,
+    donsatur_negrito: 230,
+    donsatur_dulce: 230,
+    donsatur_salado: 200,
+    chocolinas: 350,
+    frutigram_chips: 360,
+    frutigram_salvado: 360,
+}
+let coca = {
+    coca_cola: 380,
+    coca_zero: 400,
+    fanta: 380,
+    fanta_zero: 400,
+    sprite: 380,
+    sprite_zero: 400,
+    schweppes_tonica: 380,
+    schweppes_pomelo: 380,
+}
 
-let char1 = '';
-let char2 = '';
-let char3 = "";
-let prod_cont = 0;//cantidad de veces se uso el producto (maximo 2 usos).
-let hidro_cont = 0;//cantidad de veces que uso el hidrolavao (maximo 2 usos).
-let seco_cont = 0;//cantidad de veces que se uso el secado (maximo).
+let pepsico = {
+    pepsi_cola: 350,
+    pepsi_black: 380,
+    seven_up: 350,
+    seven_free: 380,
+    mirinda: 350,
+    gatorade: 380,
+    h2o_naranja: 320,
+    h20_citrus: 320,
+    h20_lemonchelo: 320,
+}
 
-alert('Bienvenido al primer lavadero automatico NECO WASH');
+let golosina = {
+    bon_o_bon: 100,
+    pico_chupetin: 70,
+    pico_masticable: 20,
+    sugus_confite: 240,
+    turron_mani: 100,
+    flynnPaff: 30,
+    yapa: 90,
+    alfajor_guaymallen: 150,
+    gomitas_mogul: 120,
+}
 
+//Codigo App
+
+let opcion1=0;
+alert("Bienvenido a Auto-AutoService");
 do {
-    char1 = (prompt("¿Quiere utilizar el PRODUCTO para el auto? si/no"));
-
-    if (char1 == 'si' || char1 == 'SI' || char1 == 'Si') {
-        prod_cont = prod_cont + 1;
-
-        let w1 = prompt("¿Quiere utilizar más producto? si/no ");
-
-        if (w1 == 'si' || w1 == 'SI' || w1 == 'Si') {
-            prod_cont = prod_cont + 1;
-        } else {
-            char1 = 'no';
-        }
+    opcion1 = prompt("\nMENU:\n1- Bebidas\n2- Comestibles\n3- Golosinas\n0- Salir\n\nIngrese una opcion");
+    if (opcion1 < 0 || opcion1 > 4) {
+        alert("Opcion incorrecta.")
+        opcion1 = prompt("Ingrese una opcion correctamente");
     }
-} while ((char1 == 'si' || char1 == 'SI' || char1 == 'Si') && prod_cont < 2);
+    switch (opcion1) {
+        case 1:
+            
+            break;
 
-console.log(prod_cont);
-
-do {
-    char2 = (prompt("¿Quiere utilizar el HIDRO LAVADO? si/no"));
-
-    if (char2 == 'si' || char1 == 'SI' || char1 == 'Si') {
-        hidro_cont = hidro_cont + 1;
-
-        let w1 = prompt("¿Quiere utilizarlo más tiempo? si/no ");
-
-        if (w1 == 'si' || w1 == 'SI' || w1 == 'Si') {
-            hidro_cont = hidro_cont + 1;
-        } else {
-            char2 = 'no';
-        }
+        default:
+            break;
     }
-
-} while ((char2 == 'si' || char2 == 'SI' || char2 == 'Si') && hidro_cont < 2);
-
-console.log(hidro_cont);
-
-do {
-    char3 = (prompt("¿Quiere utilizar el SECADO rapido? si/no"));
-
-    if (char3 == 'si' || char3 == 'SI' || char3 == 'Si') {
-        seco_cont = seco_cont + 1;
-    }
-
-} while ((char3 == 'si' || char3 == 'SI' || char3 == 'Si') && seco_cont < 1);
-
-console.log(seco_cont);
-let t_produ = prod_cont * precios.producto;
-let t_hidro = hidro_cont * precios.hidro;
-let t_seca = seco_cont * precios.secado;
-let total = hidro_cont * precios.hidro + prod_cont * precios.producto + seco_cont * precios.secado;
-
-
-console.log(
-    "Producto: " + prod_cont, " x " + precios.producto, " =  " + t_produ,
-    "/ Hidrolavado: " + hidro_cont, " x " + precios.hidro, " = " + t_hidro,
-    "/ Secado: " + seco_cont, " x " + precios.secado, " = " + t_seca,
-    "/ El importe total de: $" + total,
-)
+}while(opcion1 != 0);
