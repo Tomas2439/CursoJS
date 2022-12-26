@@ -1,3 +1,4 @@
+/* 1er cierre
 //---------CUPONES---------------
 const cupones = { //Se ingresan los valores para porcentajes. producto * valor = valor con descuento incluido.
     vip: 0.50,
@@ -60,7 +61,7 @@ function ticket (carrito,precio_final,total){
         +Objeto (cupones) si hay un cupon valido, habra un descuento.
         +Proceso de eliminacion (busqueda y eliminacion).
 */
-
+/* 2do cierre
 //variables globales ------  aplicacion script
 let carrito = [];
 let total = 0;
@@ -74,6 +75,6 @@ precio_final=valor_final(total)
 console.log(precio_final);
 ticket(carrito,precio_final,total);
 
-
+*/
 
 
