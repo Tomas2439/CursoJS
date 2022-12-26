@@ -6,7 +6,6 @@ Clickbutton.forEach(btn => {
     btn.addEventListener('click', addToCarritoItem)
 })
 
-
 function addToCarritoItem(e) {
     const button = e.target
     const item = button.closest('.card')
@@ -23,6 +22,7 @@ function addToCarritoItem(e) {
 
     addItemCarrito(newItem)
 }
+
 
 
 function addItemCarrito(newItem) {
@@ -73,11 +73,13 @@ function renderCarrito() {
         tr.innerHTML = Content;
         tbody.append(tr)
 
+
         tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
         tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
     })
     CarritoTotal()
 }
+
 
 function CarritoTotal() {
     let Total = 0;
@@ -100,6 +102,7 @@ function removeItemCarrito(e) {
         if (carrito[i].title.trim() === title.trim()) {
             carrito.splice(i, 1)
         }
+
     }
 
     const alert = document.querySelector('.remove')
