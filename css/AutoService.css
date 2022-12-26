@@ -1,34 +1,45 @@
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: cadetblue;
-    margin: auto auto;
+body{
+    background-color:cadetblue;
 }
-section div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: cornsilk;
-    width: 20%;
-    margin: 0.25em auto;
-    border-radius: 0.3em;
+header{
+    z-index: 100;
 }
-section div p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2em;
-    text-justify: auto;
+.decription{
+    height: 25px;
+    overflow:hidden;
+    transition: height .3s ease-in .3s;
+}
+.decription:hover{
+    height: 80px;
+}
+.carrito {
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-header{
-    background-color:darkslategrey;
-    color:aquamarine;
+.table__productos {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.table__productos>img {
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.table__cantidad>input {
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.hide,.remove {
+    display: none;
 }
